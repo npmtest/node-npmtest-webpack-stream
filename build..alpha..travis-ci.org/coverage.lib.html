@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-webpack-stream/webpack-stream/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-webpack-stream/node_modules/webpack-stream/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-webpack-stream">npmtest-webpack-stream (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-webpack-stream/webpack-stream/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-webpack-stream/node_modules/webpack-stream/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">8.87% <small>(11 / 124)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-webpack-stream/webpack-stream/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-webpack-stream/node_modules/webpack-stream/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -694,214 +696,213 @@ var defaultStatsOptions = {
   errorDetails: false
 };
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function (options, wp, done) {</span>
-<span class="cstat-no" title="statement not covered">  options = clone(options) || {};</span>
-<span class="cstat-no" title="statement not covered">  var config = options.config || options;</span>
-<span class="cstat-no" title="statement not covered">  if (typeof done !== 'function') {</span>
-<span class="cstat-no" title="statement not covered">    var callingDone = false;</span>
-<span class="cstat-no" title="statement not covered">    done = <span class="fstat-no" title="function not covered">function (err, stats) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (err) {</span>
+module.exports = <span class="fstat-no" title="function not covered" >function (options, wp, done) {</span>
+<span class="cstat-no" title="statement not covered" >  options = clone(options) || {};</span>
+<span class="cstat-no" title="statement not covered" >  var config = options.config || options;</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof done !== 'function') {</span>
+<span class="cstat-no" title="statement not covered" >    var callingDone = false;</span>
+<span class="cstat-no" title="statement not covered" >    done = <span class="fstat-no" title="function not covered" >function (err, stats) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
         // The err is here just to match the API but isnt used
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
-<span class="cstat-no" title="statement not covered">      stats = stats || {};</span>
-<span class="cstat-no" title="statement not covered">      if (options.quiet || callingDone) {</span>
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >      stats = stats || {};</span>
+<span class="cstat-no" title="statement not covered" >      if (options.quiet || callingDone) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
 &nbsp;
       // Debounce output a little for when in watch mode
-<span class="cstat-no" title="statement not covered">      if (options.watch) {</span>
-<span class="cstat-no" title="statement not covered">        callingDone = true;</span>
-<span class="cstat-no" title="statement not covered">        setTimeout(<span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">          callingDone = false;</span>
+<span class="cstat-no" title="statement not covered" >      if (options.watch) {</span>
+<span class="cstat-no" title="statement not covered" >        callingDone = true;</span>
+<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >          callingDone = false;</span>
         }, 500);
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if (options.verbose) {</span>
-<span class="cstat-no" title="statement not covered">        gutil.log(stats.toString({</span>
+<span class="cstat-no" title="statement not covered" >      if (options.verbose) {</span>
+<span class="cstat-no" title="statement not covered" >        gutil.log(stats.toString({</span>
           colors: gutil.colors.supportsColor
         }));
       } else {
-<span class="cstat-no" title="statement not covered">        var statsOptions = options &amp;&amp; options.stats || {};</span>
+<span class="cstat-no" title="statement not covered" >        var statsOptions = options &amp;&amp; options.stats || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        Object.keys(defaultStatsOptions).forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span>
-<span class="cstat-no" title="statement not covered">          if (typeof statsOptions[key] === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered">            statsOptions[key] = defaultStatsOptions[key];</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(defaultStatsOptions).forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (typeof statsOptions[key] === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >            statsOptions[key] = defaultStatsOptions[key];</span>
           }
         });
 &nbsp;
-<span class="cstat-no" title="statement not covered">        gutil.log(stats.toString(statsOptions));</span>
+<span class="cstat-no" title="statement not covered" >        gutil.log(stats.toString(statsOptions));</span>
       }
     };
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var webpack = wp || require('webpack');</span>
-<span class="cstat-no" title="statement not covered">  var entry = [];</span>
-<span class="cstat-no" title="statement not covered">  var entries = Object.create(null);</span>
+<span class="cstat-no" title="statement not covered" >  var webpack = wp || require('webpack');</span>
+<span class="cstat-no" title="statement not covered" >  var entry = [];</span>
+<span class="cstat-no" title="statement not covered" >  var entries = Object.create(null);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var stream = through(<span class="fstat-no" title="function not covered">function (file) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (file.isNull()) {</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >  var stream = through(<span class="fstat-no" title="function not covered" >function (file) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (file.isNull()) {</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
-<span class="cstat-no" title="statement not covered">    if ('named' in file) {</span>
-<span class="cstat-no" title="statement not covered">      if (!Array.isArray(entries[file.named])) {</span>
-<span class="cstat-no" title="statement not covered">        entries[file.named] = [];</span>
+<span class="cstat-no" title="statement not covered" >    if ('named' in file) {</span>
+<span class="cstat-no" title="statement not covered" >      if (!Array.isArray(entries[file.named])) {</span>
+<span class="cstat-no" title="statement not covered" >        entries[file.named] = [];</span>
       }
-<span class="cstat-no" title="statement not covered">      entries[file.named].push(file.path);</span>
+<span class="cstat-no" title="statement not covered" >      entries[file.named].push(file.path);</span>
     } else {
-<span class="cstat-no" title="statement not covered">      entry = entry || [];</span>
-<span class="cstat-no" title="statement not covered">      entry.push(file.path);</span>
+<span class="cstat-no" title="statement not covered" >      entry = entry || [];</span>
+<span class="cstat-no" title="statement not covered" >      entry.push(file.path);</span>
     }
-  }, <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
-<span class="cstat-no" title="statement not covered">    var handleConfig = <span class="fstat-no" title="function not covered">function (config) {</span></span>
-<span class="cstat-no" title="statement not covered">      config.output = config.output || {};</span>
-<span class="cstat-no" title="statement not covered">      config.watch = !!options.watch;</span>
+  }, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var handleConfig = <span class="fstat-no" title="function not covered" >function (config) {</span></span>
+<span class="cstat-no" title="statement not covered" >      config.output = config.output || {};</span>
+<span class="cstat-no" title="statement not covered" >      config.watch = !!options.watch;</span>
 &nbsp;
       // Determine pipe'd in entry
-<span class="cstat-no" title="statement not covered">      if (Object.keys(entries).length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered">        entry = entries;</span>
-<span class="cstat-no" title="statement not covered">        if (!config.output.filename) {</span>
+<span class="cstat-no" title="statement not covered" >      if (Object.keys(entries).length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        entry = entries;</span>
+<span class="cstat-no" title="statement not covered" >        if (!config.output.filename) {</span>
           // Better output default for multiple chunks
-<span class="cstat-no" title="statement not covered">          config.output.filename = '[name].js';</span>
+<span class="cstat-no" title="statement not covered" >          config.output.filename = '[name].js';</span>
         }
-      } else <span class="cstat-no" title="statement not covered">if (entry.length &lt; 2) {</span>
-<span class="cstat-no" title="statement not covered">        entry = entry[0] || entry;</span>
+      } else <span class="cstat-no" title="statement not covered" >if (entry.length &lt; 2) {</span>
+<span class="cstat-no" title="statement not covered" >        entry = entry[0] || entry;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      config.entry = config.entry || entry;</span>
-<span class="cstat-no" title="statement not covered">      config.output.path = config.output.path || process.cwd();</span>
-<span class="cstat-no" title="statement not covered">      config.output.filename = config.output.filename || '[hash].js';</span>
-<span class="cstat-no" title="statement not covered">      config.watch = options.watch;</span>
-<span class="cstat-no" title="statement not covered">      entry = [];</span>
+<span class="cstat-no" title="statement not covered" >      config.entry = config.entry || entry;</span>
+<span class="cstat-no" title="statement not covered" >      config.output.path = config.output.path || process.cwd();</span>
+<span class="cstat-no" title="statement not covered" >      config.output.filename = config.output.filename || '[hash].js';</span>
+<span class="cstat-no" title="statement not covered" >      config.watch = options.watch;</span>
+<span class="cstat-no" title="statement not covered" >      entry = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if (!config.entry || config.entry.length &lt; 1) {</span>
-<span class="cstat-no" title="statement not covered">        gutil.log('webpack-stream - No files given; aborting compilation');</span>
-<span class="cstat-no" title="statement not covered">        self.emit('end');</span>
-<span class="cstat-no" title="statement not covered">        return false;</span>
+<span class="cstat-no" title="statement not covered" >      if (!config.entry || config.entry.length &lt; 1) {</span>
+<span class="cstat-no" title="statement not covered" >        gutil.log('webpack-stream - No files given; aborting compilation');</span>
+<span class="cstat-no" title="statement not covered" >        self.emit('end');</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
       }
-<span class="cstat-no" title="statement not covered">      return true;</span>
+<span class="cstat-no" title="statement not covered" >      return true;</span>
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var succeeded;</span>
-<span class="cstat-no" title="statement not covered">    if (Array.isArray(config)) {</span>
-<span class="cstat-no" title="statement not covered">      for (var i = 0; i &lt; config.length; i++) {</span>
-<span class="cstat-no" title="statement not covered">        succeeded = handleConfig(config[i]);</span>
-<span class="cstat-no" title="statement not covered">        if (!succeeded) {</span>
-<span class="cstat-no" title="statement not covered">          return false;</span>
+<span class="cstat-no" title="statement not covered" >    var succeeded;</span>
+<span class="cstat-no" title="statement not covered" >    if (Array.isArray(config)) {</span>
+<span class="cstat-no" title="statement not covered" >      for (var i = 0; i &lt; config.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        succeeded = handleConfig(config[i]);</span>
+<span class="cstat-no" title="statement not covered" >        if (!succeeded) {</span>
+<span class="cstat-no" title="statement not covered" >          return false;</span>
         }
       }
     } else {
-<span class="cstat-no" title="statement not covered">      succeeded = handleConfig(config);</span>
-<span class="cstat-no" title="statement not covered">      if (!succeeded) {</span>
-<span class="cstat-no" title="statement not covered">        return false;</span>
+<span class="cstat-no" title="statement not covered" >      succeeded = handleConfig(config);</span>
+<span class="cstat-no" title="statement not covered" >      if (!succeeded) {</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var compiler = webpack(config, <span class="fstat-no" title="function not covered">function (err, stats) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (err) {</span>
-<span class="cstat-no" title="statement not covered">        self.emit('error', new gutil.PluginError('webpack-stream', err));</span>
+<span class="cstat-no" title="statement not covered" >    var compiler = webpack(config, <span class="fstat-no" title="function not covered" >function (err, stats) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        self.emit('error', new gutil.PluginError('webpack-stream', err));</span>
       }
-<span class="cstat-no" title="statement not covered">      var jsonStats = stats.toJson() || {};</span>
-<span class="cstat-no" title="statement not covered">      var errors = jsonStats.errors || [];</span>
-<span class="cstat-no" title="statement not covered">      if (errors.length) {</span>
-<span class="cstat-no" title="statement not covered">        var errorMessage = errors.reduce(<span class="fstat-no" title="function not covered">function (resultMessage, nextError) {</span></span>
-<span class="cstat-no" title="statement not covered">          resultMessage += nextError.toString();</span>
-<span class="cstat-no" title="statement not covered">          return resultMessage;</span>
+<span class="cstat-no" title="statement not covered" >      var jsonStats = stats.toJson() || {};</span>
+<span class="cstat-no" title="statement not covered" >      var errors = jsonStats.errors || [];</span>
+<span class="cstat-no" title="statement not covered" >      if (errors.length) {</span>
+<span class="cstat-no" title="statement not covered" >        var errorMessage = errors.reduce(<span class="fstat-no" title="function not covered" >function (resultMessage, nextError) {</span></span>
+<span class="cstat-no" title="statement not covered" >          resultMessage += nextError.toString();</span>
+<span class="cstat-no" title="statement not covered" >          return resultMessage;</span>
         }, '');
-<span class="cstat-no" title="statement not covered">        self.emit('error', new gutil.PluginError('webpack-stream', errorMessage));</span>
+<span class="cstat-no" title="statement not covered" >        self.emit('error', new gutil.PluginError('webpack-stream', errorMessage));</span>
       }
-<span class="cstat-no" title="statement not covered">      if (!options.watch) {</span>
-<span class="cstat-no" title="statement not covered">        self.queue(null);</span>
+<span class="cstat-no" title="statement not covered" >      if (!options.watch) {</span>
+<span class="cstat-no" title="statement not covered" >        self.queue(null);</span>
       }
-<span class="cstat-no" title="statement not covered">      done(err, stats);</span>
-<span class="cstat-no" title="statement not covered">      if (options.watch &amp;&amp; !options.quiet) {</span>
-<span class="cstat-no" title="statement not covered">        gutil.log('webpack is watching for changes');</span>
+<span class="cstat-no" title="statement not covered" >      done(err, stats);</span>
+<span class="cstat-no" title="statement not covered" >      if (options.watch &amp;&amp; !options.quiet) {</span>
+<span class="cstat-no" title="statement not covered" >        gutil.log('webpack is watching for changes');</span>
       }
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var handleCompiler = <span class="fstat-no" title="function not covered">function (compiler) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var handleCompiler = <span class="fstat-no" title="function not covered" >function (compiler) {</span></span>
       // In watch mode webpack returns a wrapper object so we need to get
       // the underlying compiler
-<span class="cstat-no" title="statement not covered">      if (options.watch &amp;&amp; compiler.compiler) {</span>
-<span class="cstat-no" title="statement not covered">        compiler = compiler.compiler;</span>
+<span class="cstat-no" title="statement not covered" >      if (options.watch &amp;&amp; compiler.compiler) {</span>
+<span class="cstat-no" title="statement not covered" >        compiler = compiler.compiler;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if (options.progress) {</span>
-<span class="cstat-no" title="statement not covered">        compiler.apply(new ProgressPlugin(<span class="fstat-no" title="function not covered">function (percentage, msg) {</span></span>
-<span class="cstat-no" title="statement not covered">          percentage = Math.floor(percentage * 100);</span>
-<span class="cstat-no" title="statement not covered">          msg = percentage + '% ' + msg;</span>
-<span class="cstat-no" title="statement not covered">          if (percentage &lt; 10) <span class="cstat-no" title="statement not covered">msg = ' ' + msg;</span></span>
-<span class="cstat-no" title="statement not covered">          gutil.log('webpack', msg);</span>
+<span class="cstat-no" title="statement not covered" >      if (options.progress) {</span>
+<span class="cstat-no" title="statement not covered" >        compiler.apply(new ProgressPlugin(<span class="fstat-no" title="function not covered" >function (percentage, msg) {</span></span>
+<span class="cstat-no" title="statement not covered" >          percentage = Math.floor(percentage * 100);</span>
+<span class="cstat-no" title="statement not covered" >          msg = percentage + '% ' + msg;</span>
+<span class="cstat-no" title="statement not covered" >          if (percentage &lt; 10) <span class="cstat-no" title="statement not covered" >msg = ' ' + msg;</span></span>
+<span class="cstat-no" title="statement not covered" >          gutil.log('webpack', msg);</span>
         }));
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var fs = compiler.outputFileSystem = new MemoryFileSystem();</span>
+<span class="cstat-no" title="statement not covered" >      var fs = compiler.outputFileSystem = new MemoryFileSystem();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      compiler.plugin('after-emit', <span class="fstat-no" title="function not covered">function (compilation, callback) {</span></span>
-<span class="cstat-no" title="statement not covered">        Object.keys(compilation.assets).forEach(<span class="fstat-no" title="function not covered">function (outname) {</span></span>
-<span class="cstat-no" title="statement not covered">          if (compilation.assets[outname].emitted) {</span>
-<span class="cstat-no" title="statement not covered">            var file = prepareFile(fs, compiler, outname);</span>
-<span class="cstat-no" title="statement not covered">            self.queue(file);</span>
+<span class="cstat-no" title="statement not covered" >      compiler.plugin('after-emit', <span class="fstat-no" title="function not covered" >function (compilation, callback) {</span></span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(compilation.assets).forEach(<span class="fstat-no" title="function not covered" >function (outname) {</span></span>
+<span class="cstat-no" title="statement not covered" >          if (compilation.assets[outname].emitted) {</span>
+<span class="cstat-no" title="statement not covered" >            var file = prepareFile(fs, compiler, outname);</span>
+<span class="cstat-no" title="statement not covered" >            self.queue(file);</span>
           }
         });
-<span class="cstat-no" title="statement not covered">        callback();</span>
+<span class="cstat-no" title="statement not covered" >        callback();</span>
       });
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (Array.isArray(options.config) &amp;&amp; options.watch) {</span>
-<span class="cstat-no" title="statement not covered">      compiler.watchings.forEach(<span class="fstat-no" title="function not covered">function (compiler) {</span></span>
-<span class="cstat-no" title="statement not covered">        handleCompiler(compiler);</span>
+<span class="cstat-no" title="statement not covered" >    if (Array.isArray(options.config) &amp;&amp; options.watch) {</span>
+<span class="cstat-no" title="statement not covered" >      compiler.watchings.forEach(<span class="fstat-no" title="function not covered" >function (compiler) {</span></span>
+<span class="cstat-no" title="statement not covered" >        handleCompiler(compiler);</span>
       });
-    } else <span class="cstat-no" title="statement not covered">if (Array.isArray(options.config)) {</span>
-<span class="cstat-no" title="statement not covered">      compiler.compilers.forEach(<span class="fstat-no" title="function not covered">function (compiler) {</span></span>
-<span class="cstat-no" title="statement not covered">        handleCompiler(compiler);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (Array.isArray(options.config)) {</span>
+<span class="cstat-no" title="statement not covered" >      compiler.compilers.forEach(<span class="fstat-no" title="function not covered" >function (compiler) {</span></span>
+<span class="cstat-no" title="statement not covered" >        handleCompiler(compiler);</span>
       });
     } else {
-<span class="cstat-no" title="statement not covered">      handleCompiler(compiler);</span>
+<span class="cstat-no" title="statement not covered" >      handleCompiler(compiler);</span>
     }
   });
 &nbsp;
   // If entry point manually specified, trigger that
-<span class="cstat-no" title="statement not covered">  var hasEntry = Array.isArray(config)</span>
-    ? some(config, <span class="fstat-no" title="function not covered">function (c) {</span> <span class="cstat-no" title="statement not covered">return c.entry; </span>})
+<span class="cstat-no" title="statement not covered" >  var hasEntry = Array.isArray(config)</span>
+    ? some(config, <span class="fstat-no" title="function not covered" >function (c) {</span> <span class="cstat-no" title="statement not covered" >return c.entry; </span>})
     : config.entry;
-<span class="cstat-no" title="statement not covered">  if (hasEntry) {</span>
-<span class="cstat-no" title="statement not covered">    stream.end();</span>
+<span class="cstat-no" title="statement not covered" >  if (hasEntry) {</span>
+<span class="cstat-no" title="statement not covered" >    stream.end();</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return stream;</span>
+<span class="cstat-no" title="statement not covered" >  return stream;</span>
 };
 &nbsp;
-<span class="fstat-no" title="function not covered">function prepareFile (fs, compiler, outname) {</span>
-<span class="cstat-no" title="statement not covered">  var path = fs.join(compiler.outputPath, outname);</span>
-<span class="cstat-no" title="statement not covered">  if (path.indexOf('?') !== -1) {</span>
-<span class="cstat-no" title="statement not covered">    path = path.split('?')[0];</span>
+<span class="fstat-no" title="function not covered" >function prepareFile (fs, compiler, outname) {</span>
+<span class="cstat-no" title="statement not covered" >  var path = fs.join(compiler.outputPath, outname);</span>
+<span class="cstat-no" title="statement not covered" >  if (path.indexOf('?') !== -1) {</span>
+<span class="cstat-no" title="statement not covered" >    path = path.split('?')[0];</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var contents = fs.readFileSync(path);</span>
+<span class="cstat-no" title="statement not covered" >  var contents = fs.readFileSync(path);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var file = new File({</span>
+<span class="cstat-no" title="statement not covered" >  var file = new File({</span>
     base: compiler.outputPath,
     path: path,
     contents: contents
   });
-<span class="cstat-no" title="statement not covered">  return file;</span>
+<span class="cstat-no" title="statement not covered" >  return file;</span>
 }
 &nbsp;
 // Expose webpack if asked
 Object.defineProperty(module.exports, 'webpack', {
-  get: <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    return require('webpack');</span>
+  get: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    return require('webpack');</span>
   }
 });
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 22:13:30 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 06:44:57 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
