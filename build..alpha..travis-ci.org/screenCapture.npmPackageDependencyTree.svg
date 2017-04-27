@@ -104,7 +104,7 @@
 <tspan x="10" y="1626">    │ ├── https-browserify@0.0.1 </tspan>
 <tspan x="10" y="1642">    │ ├── os-browserify@0.2.1 </tspan>
 <tspan x="10" y="1658">    │ ├── path-browserify@0.0.0 </tspan>
-<tspan x="10" y="1674">    │ ├── process@0.11.9 </tspan>
+<tspan x="10" y="1674">    │ ├── process@0.11.10 </tspan>
 <tspan x="10" y="1690">    │ ├── punycode@1.4.1 </tspan>
 <tspan x="10" y="1706">    │ ├── querystring-es3@0.2.1 </tspan>
 <tspan x="10" y="1722">    │ ├─┬ readable-stream@2.2.9 </tspan>
@@ -175,7 +175,7 @@
 <tspan x="10" y="2762">    │   │   │ └── is-posix-bracket@0.1.1 </tspan>
 <tspan x="10" y="2778">    │   │   ├── extglob@0.3.2 </tspan>
 <tspan x="10" y="2794">    │   │   ├── filename-regex@2.0.0 </tspan>
-<tspan x="10" y="2810">    │   │   ├─┬ kind-of@3.1.0 </tspan>
+<tspan x="10" y="2810">    │   │   ├─┬ kind-of@3.2.0 </tspan>
 <tspan x="10" y="2826">    │   │   │ └── is-buffer@1.1.5 </tspan>
 <tspan x="10" y="2842">    │   │   ├─┬ normalize-path@2.1.1 </tspan>
 <tspan x="10" y="2858">    │   │   │ └── remove-trailing-separator@1.0.1 </tspan>
